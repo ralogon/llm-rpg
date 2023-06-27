@@ -11,7 +11,9 @@ from pdfplumber.page import Page
 from pdfplumber.pdf import PDF
 from memory_profiler import profile
 
-from llm import config
+import sys
+sys.path.append('content/llm-rpg')
+import config
 
 
 logging.basicConfig(level=logging.INFO)

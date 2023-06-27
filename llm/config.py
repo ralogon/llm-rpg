@@ -4,18 +4,18 @@ from pathlib import Path
 REPO_DIR = Path(os.path.realpath(os.path.join(os.path.dirname(__file__), '..')))
 
 # Text extraction
-url = 'https://gosafir.com/mag/wp-content/uploads/2019/12/Tolkien-J.-The-lord-of-the-rings-HarperCollins-ebooks-2010.pdf'
+url = 'https://web.seducoahuila.gob.mx/biblioweb/upload/J.R.R.%20Tolkien%20La%20Comunidad%20del%20anillo%20I.pdf'
 header_height = 60  # Main text distance from the top of the page: to remove header
 footer_height = 540 # Remove footer
-start_page = 45
-end_page = 1055
-extraction_path = REPO_DIR / "llm/data/extracted_text.jsonl"
+start_page = 1
+end_page = 183
+extraction_path = REPO_DIR / "llm/data/extracted_text.json"
 
 # Text processing
 min_length = 100
 
 # HF repo
-hf_repo = "JeremyArancio/llm-tolkien"
+hf_repo = "ralogon/llm-tolkien-spanish"
 
 # Dataset
 context_length = 2048
