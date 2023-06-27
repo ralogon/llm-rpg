@@ -10,9 +10,9 @@ class CastOutputToFloat(nn.Sequential):
 def prepare_model(model):
     for param in model.parameters():
       param.requires_grad = False  # freeze the model - train adapters later
-      if param.ndim == 1:
-        # cast the small parameters (e.g. layernorm) to fp32 for stability
-        param.data = param.data.to(float32)
+      # if param.ndim == 1:
+        # # cast the small parameters (e.g. layernorm) to fp32 for stability
+        # param.data = param.data.to(float32)
     model.gradient_checkpointing_enable()  # reduce number of stored activations
     model.enable_input_require_grads()
     model.lm_head = CastOutputToFloat(model.lm_head)
