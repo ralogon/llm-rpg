@@ -6,9 +6,10 @@ import config
 
 
 def import_model(hf_repo):
-  hf_repo = 'ralogon/llm-tolkien-spanish'
   config = PeftConfig.from_pretrained(hf_repo)
-  model = AutoModelForCausalLM.from_pretrained(config.base_model_name_or_path, return_dict=True, load_in_8bit=True, device_map='auto')
+  model = AutoModelForCausalLM.from_pretrained(config.base_model_name_or_path, 
+                                               return_dict=True, load_in_8bit=True, 
+                                               device_map='auto')
   tokenizer = AutoTokenizer.from_pretrained(config.base_model_name_or_path)
   # Load the Lora model
   model = PeftModel.from_pretrained(model, hf_repo)

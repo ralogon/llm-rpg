@@ -15,6 +15,12 @@ from training_utils import prepare_model, print_trainable_parameters, compute_pe
 LOGGER = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
+import bitsandbytes
+import accelerate
+from transformers import AutoModelForCausalLM
+
+model = AutoModelForCausalLM.from_pretrained("bigscience/bloom-3b", 
+                    device_map="auto", load_in_8bit=True)
 
 class LLMTolkien():
 
