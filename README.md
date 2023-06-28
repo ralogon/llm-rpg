@@ -4,5 +4,5 @@ Adaptación al español del repo [LOTR Storyteller: the AI of Sauron 🧙](https
 
 Abrir el notebook retrain_LLM.ipynb en colab para proceder con la guía.
 
-El notebook retrain_LLM_just_commands.ipynb contiene los commandos necesarios para re-entrenar un LLM sin la explicación en detalle que se incluse en retrain_LLM.ipynb.
+El notebook retrain_LLM_just_commands.ipynb contiene los commandos necesarios para re-entrenar un LLM sin la explicación en detalle que se incluye en retrain_LLM.ipynb.
 
